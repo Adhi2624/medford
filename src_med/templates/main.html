@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MEDFORD</title>
+
+    <link href="{% static 'css\bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+        integrity="sha512-doJrC/ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrENF03M+TYBP92PnYUlXFH1ZW0FpLw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="{% static 'css\style.css' %}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cb1090d7c0.js" crossorigin="anonymous"></script>
+</head>
+
+<body >
+    <section  class="">
+
+        <nav class="navbar navbar-expand-lg  sticky-top  navbar-dark  py-lg-3 py-md-3 py-sm-0 shadow-sm "  style="background-color: #381c4a;">
+            <div class="container-fluid">
+                <img src="{%static '/images/logo.png' %}" width="30px" alt="" class="d-inline-block align-middle mr-2 nav-logo">
+                <a href="#" class="navbar-brand">
+                    <!-- Logo Image -->
+
+                    <!-- Logo Text -->
+                    <span class="text-uppercase font-weight-bold">MEDFORD TECHNOLOGIES</span>
+                </a>
+                <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto  ">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="aboutus">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/carrer">Carrers</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        {% block content %}
+        {% endblock %}
+
+    </section>
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only pt-0 " style="color: white;background-color: #381c4a;">
+
+        <!--Footer Links-->
+        <div class="container ">
+
+            <!--Grid row-->
+            <div class="row pt-4 mb-3 text-center d-flex justify-content-center">
+                <h3>MEDFORD TECHNOLOGIES Pvt.ltd.</h3>
+
+
+            </div>
+            <div class="row  mb-3 text-center d-flex justify-content-center">
+                <h5> Email: info.medfordtech@gmail.com</h5>
+                <h6>2<sup>nd</sup> floor,Sona Incubation Foundation, valliappa block ,sona
+                    campus,Salem-5</h6>
+            </div>
+            <!--Grid row-->
+
+            <hr class="rgba-white-light" style="margin: 0 15%;">
+
+            <!--Grid row-->
+
+
+        </div>
+        <!--Grid row-->
+
+
+
+        <!--Grid row-->
+        <div class="row pt-4 text-center">
+
+            <!--Grid column-->
+            <div class="col-md-12">
+                <div class="footer-socials  flex-center">
+                    <!--Facebook
+                    <a class="icons-sm fb-ic" href=""><i class="fa fa-facebook fa-lg  "> </i></a>-->
+                    <!--Twitter-->
+                    <a class="icons-sm tw-ic" href="https://twitter.com/medford_tech"><i class="fa fa-twitter fa-lg  "> </i></a>
+
+                    <!--Linkedin-->
+                    <a class="icons-sm li-ic" href="https://www.linkedin.com/company/medford/"><i class="fa fa-linkedin fa-lg  "> </i></a>
+                    <!--Instagram-->
+                    <a class="icons-sm ins-ic" href="https://instagram.com/medford_technologies?igshid=ZDdkNTZiNTM="><i class="fa fa-instagram fa-lg  "> </i></a>
+
+                </div>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+
+        </div>
+        <!--/Footer Links-->
+
+        <!--Copyright-->
+        <div class="footer-copyright text-center  py-3" id="footer-copyright">
+            © 2022 Copyright: medford technologies
+        </div>
+        </div>
+        <!--/Copyright-->
+
+    </footer>
+
+
+    <script src="{% static 'js\bootstrap.bundle.min.js' %}">
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 400, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1000 // values from 0 to 3000, with step 50ms
+        });
+    </script>
+    <script>
+        // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</body>

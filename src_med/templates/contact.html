@@ -1,0 +1,90 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="contact-body pt-4" >
+  <header class="pt-4">
+    <h2>Request a Call Back from us</h2>
+    {% for msg in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Hey!</strong>{{msg}}
+      
+    </div>
+    {% endfor %}
+  </header>
+  <div class="row gy-5">
+    <div class="col-lg-7">
+      <div class="pt-3">
+        <div class="p-4 p-lg-5  shadow-lg">
+          <form action="/contact" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row gy-3">
+              <div class="col-lg-6">
+                <input class="form-control" type="text" name="firstname" placeholder="First name">
+              </div>
+              <div class="col-lg-6">
+                <input class="form-control" type="text" name="lastname" placeholder="Last name">
+              </div>
+              <div class="col-lg-6">
+                <input class="form-control" type="tel" name="phone" placeholder="Phone number">
+              </div>
+              <div class="col-lg-6">
+                <input class="form-control" type="text" name="subject" placeholder="Subject">
+              </div>
+              <div class="col-lg-12">
+                <input class="form-control" type="email" name="email" placeholder="Email address">
+              </div>
+              <div class="col-lg-12">
+                <textarea class="form-control" name="message" rows="5" placeholder="Leave your message"></textarea>
+              </div>
+              <div class="col-lg-12">
+                <button class="btn btn-outline-dark" type="submit">Submit now</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 contact-address shadow-lg ">
+
+      <h3>Have a quesion?</h3>
+      <p class="text-muted mb-5">If you got any questions please do not hesitate to send us a message.</p>
+      <ul class="list-unstyled">
+        <li class="d-flex mb-3">
+          <div class="icon flex-shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="ms-3">
+            <h5 class="mb-0 p-1">Corporate address</h5>
+            <p class="text-muted text-sm">2<sup>nd</sup> floor,Sona Incubation Foundation, valliappa block ,sona
+              campus,Salem-5</p>
+          </div>
+        </li>
+        <li class="d-flex mb-3">
+          <div class="icon flex-shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="ms-3">
+            <h5 class="mb-0 p-1">Registered Address</h5>
+            <p class="text-muted text-sm">2<sup>nd</sup> No.34/23 Palani Muthu Road Vidhya nagar,3rd Cross, Ammapet salem - 636003</p>
+          </div>
+        </li>
+        
+        <li class="d-flex mb-3">
+          <div class="icon  flex-shrink-0"><i class="fas  fa-fw fa-envelope"></i></div>
+          <div class="ms-3">
+            <h5 class="mb-0">Email</h5>
+            <p class="text-muted text-sm">info.medfordtech@gmail.com</p>
+          </div>
+        </li>
+        <li class="d-flex mb-3">
+          <div class="icon  flex-shrink-0"><i class="fas text-dark fa fa-linkedin"></i></div>
+          <div class="ms-3">
+            <h5 class="mb-0">Linkedin</h5>
+            <a href="https://www.linkedin.com/company/medford/" style="text-decoration: none;">
+              <p class="text-muted text-sm">@ MEDFORD TECHNOLOGIES</p>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}
