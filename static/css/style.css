@@ -8,9 +8,6 @@ body {
     background-color:white;
 }
 
-.car-background{
-    background-color: violet;
-}
 
 
 nav {
@@ -214,6 +211,26 @@ footer i:hover {
     background-color: #343A40;
 }
 
+
+/* Hide/rearrange for smaller screens */
+@media (max-width: 767px){
+    .carasoul-caption{
+        font-size: 5%;
+    }
+    
+    
+}
+@media (max-width: 375px) {
+    .navbar-brand{
+        padding: 0% 0% 0% 0%;
+    }
+    .carasoul-caption h5 p{
+        font-size:1px ;
+    }
+
+    
+}
+
 @media (max-width : 1200px) {
     .navbar-brand {
         margin-left: auto;
@@ -233,11 +250,8 @@ footer i:hover {
         font-size: 25px;
     }
 
-    .car-background{
-        background-color: violet
-        
-        
-        ;
+    .carasoul-caption{
+        font-size:medium ;
     }
 }
 

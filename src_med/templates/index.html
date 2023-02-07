@@ -2,7 +2,9 @@
 {% load static %}
 {% block content %}
 <!--carasouel-->
-<section class="pt-1 pb-0">
+<section class="">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
     <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -12,56 +14,42 @@
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                 aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{% static 'images\caras11.jpeg' %}" class="d-block w-100 " alt="...">
-                <div class="">
-                    <div class="carousel-caption d-none d-md-block" id="carousel-caption" style=" align-items: center;
-                background-color: rgba(56, 28, 74, 0.3);
-                
-                color: white;">
-                        <h3 class="animated bounceInRight  pb-1" style="animation-delay: 0.75s; ">What do we do?
-                        </h3>
-                        <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 0.80s; padding: 0 10% 0 10%">We provide
-                            cost-optimized and quick cyclic hydrogen peroxide sterilizer machine. The plasma sterilizer
-                            uses hydrogen peroxide as a sterilant to sterilize precise medical devices and instruments.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'images\caras2.jpeg' %}" class="d-block text-center w-100" alt="..."
-                    ,style="height:536px;width:100%;">
-                <div class="carousel-caption d-none d-md-block align-middle" style=" align-items: center;
-                background-color: rgba(56, 28, 74, 0.3);
-                
-                color: white;">
-                    <h3 class="animated bounceInRight p-3 pb-1" style="animation-delay: 0.75; ">What makes our product
-                        best?</h3>
-                    <p class="animated bounceInLeft d-none d-md-block align-middle  " style="animation-delay: 0.80s;padding:0 10% 0 10% ">
-                        Our sterilizer
-                        system utilizes a combination of hydrogen peroxide and low-temperature gas plasma to sterilize
-                        authenticated medical equipment quickly and safely. The additional benefit of our product is,
-                        What we provide them at an affordable cost and quick-cyclic processed</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'images\11.jpg'%}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block" style=" align-items: center;
-                background-color: rgba(56, 28, 74, 0.3);
-                
-                color: white;">
-                    <h3 class="animated bounceInRight p-3 pb-1" style="animation-delay: 0.75s;">how does our product
-                        works?</h3>
-                    <p class="animated bounceInLeft d-none d-md-block " style="animation-delay: 0.80s; padding: 0 10% 0 10%">Hydrogen
-                        peroxide is non-toxic, powerful oxidising agent that decomposes into water and oxygen.
-                        The benefit of hydrogen peroxide is environment friendly. It does not leave harmful
-                        residues after plasma phase to the environment. Also, it has great advantages in
-                        sterilizing performance that can destroy a wide range of pathogens.</p>
-                </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images\caras11.jpeg' %}" class="d-block w-100 " alt="Image 1">
+            <div class="carousel-caption p-sm-3" style="">
+                <h2 style="font-size:3vw">What do we do?</h2>
+                <p style="font-size:1.5vw">We provide cost-optimized and quick cyclic hydrogen peroxide sterilizer machine. The
+                    plasma sterilizer uses hydrogen peroxide as a sterilant to sterilize precise medical devices and
+                    instruments.</p>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        <div class="carousel-item">
+            <img src="{% static 'images\caras2.jpeg' %}" class="d-block w-100" alt="Image 2">
+            <div class="carousel-caption" style="">
+                <h2 style="font-size:3vw">What makes our product best?</h2>
+                <p style="font-size:1.5vw">Our sterilizer system utilizes a combination of hydrogen peroxide and low-temperature gas
+                    plasma to sterilize authenticated medical equipment quickly and safely. The additional benefit of
+                    our product is, we provide them at an affordable cost and quick-cyclic processed</p>
+                </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images\11.jpg'%}" class="d-block w-100"="Image 3">
+            <div class="carousel-caption" style="">
+                <h2 style="font-size:3vw">How does our product works?</h2>
+                <p style="font-size:1.5vw">Hydrogen peroxide is non-toxic, powerful oxidising agent that decomposes into water and
+                    oxygen. The benefit of hydrogen peroxide is environment friendly. It does not leave harmful residues
+                    after plasma phase to the environment. Also, it has great advantages in sterilizing performance that
+                    can destroy a wide range of pathogens.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -71,7 +59,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
+</div>
 </section>
 <!--
 <section class="ind-2" data-aos="fade">
