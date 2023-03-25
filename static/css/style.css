@@ -11,13 +11,13 @@ body {
 
 
 nav {
-    background-color: violet;
+    background-color: #6F3096;
     
     
 }
 
 .navbar {
-    background-color: violet;
+    background-color: #6F3096;
 }
 
 .nav-logo {
@@ -47,10 +47,6 @@ nav {
 
 
 
-nav:hover {
-
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-}
 
 
 .navbar-brand {
@@ -72,6 +68,11 @@ nav:hover {
     color: violet;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 
+}
+
+strong{
+color: #6F3096;
+font-weight: bold;
 }
 
 
@@ -172,7 +173,7 @@ nav:hover {
 }
 
 footer {
-    background-color: #343A40;
+    background-color: #6F3096;
 
 }
 
@@ -208,7 +209,7 @@ footer i:hover {
 }
 
 #footer-copywrite {
-    background-color: #343A40;
+    background-color: #6F3096;
 }
 
 
@@ -217,6 +218,14 @@ footer i:hover {
     .carasoul-caption{
         font-size: 5%;
     }
+
+
+    
+.nav-logo {
+
+    height: 30px;
+    width: 30px;
+}
     
     
 }
@@ -227,7 +236,11 @@ footer i:hover {
     .carasoul-caption h5 p{
         font-size:1px ;
     }
+    .nav-logo {
 
+        height: 10px;
+        width: 10px;
+    }
     
 }
 
